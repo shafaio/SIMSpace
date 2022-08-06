@@ -18,7 +18,7 @@
     border-bottom: #0F3F49 3px solid;
 }
 
-.logininput {
+.form-control {
     border-radius: 0px !important;
     border-top: none !important;
     border-right: none !important;
@@ -29,5 +29,4 @@
 .no-focus-outline:focus {
     outline: none !important;
     box-shadow: none !important;
-    border: 3px solid #0F3F49;
 }
