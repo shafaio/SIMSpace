@@ -1,0 +1,57 @@
+@extends('layouts.main')
+
+@section('content')
+
+<section class=" " style="margin-top: 115px; ">
+    <div class="container ">
+        <div class="row mx-auto " style="height: 143px; width: 568px; ">
+            <img src="../asset/img/logo.png " alt=" ">
+        </div>
+    </div>
+</section>
+
+<section class="mt-4 ">
+    <div class="container ">
+        <h6 class="px-3 py-3 mb-5" style="background-color: #05323C; color: white; ">Data Pegawai SpaceMed</h6>
+        <a href="/tambahData" class="text-decoration-none">
+            <div class="d-flex justify-content-end mb-0">
+                <button type="button " class="btn btn-primary m-0 mb-0 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambah Data Pegawai <i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
+            </div>
+        </a>
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nama Pegawai</th>
+                    <th>ID Space</th>
+                    <th>Jabatan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Amrian Septepawan</td>
+                    <td>019998001</td>
+                    <td>Chief Executive Officer (CEO)</td>
+                </tr>
+
+            {{-- @foreach ($users as $user)
+                <tr>
+                    <td>{{ $user['nama_anggota'] }}</td>
+                    <td>{{ $user['id_anggota'] }}</td>
+                    <td>{{ $user['jabatan'] }}</td>
+                </tr>
+            @endforeach --}}
+
+            </tbody>
+            <!-- <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                </tr>
+            </tfoot> -->
+        </table>
+    </div>
+</section>
+    
+@endsection

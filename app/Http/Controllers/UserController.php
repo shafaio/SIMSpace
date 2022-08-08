@@ -7,30 +7,26 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function register (Request $request) {
+    public function Store (Request $request) {
         return $request->validate([
-            'id' => 'required|integer|unique|max:11',
-            'nama' => 'required|max:255',
+            'id_anggota' => 'required|max:11|unique',
+            'nama_anggota' => 'required|max:255',
             'password' => 'required|min:8|max:255'
-        ]);
-    }
-
-    public function Index () {
-        return view('index', [
-            'title' => 'Login',
         ]);
     }
     
     public function Login (Request $request) {
         $credentials = $request->validate([
-            'id' => 'required|integer',
-            'password' => 'required'
+            'id_anggota' => 'required|max:11',
+            'password' => 'required|min:8|max:255',
         ]);
-
+        
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
-            return redirect()->intended('/SOP');
+            
+            return redirect()->intended('/admin')->with('success', 'Login Success!');
         }
+        
+        return back()->with('loginError', 'Login Failed!');
     }
 }

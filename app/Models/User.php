@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
     
     public function sops () {
         return $this->belongsToMany(SOP::class)->withTimestamps();
