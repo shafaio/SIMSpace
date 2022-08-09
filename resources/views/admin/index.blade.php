@@ -15,7 +15,7 @@
         <h6 class="px-3 py-3 mb-0" style="background-color: #05323C; color: white; ">Data Pegawai SpaceMed</h6>
         <div class="d-flex justify-content-end mb-0">
             <a href="/tambahData" class="text-decoration-none">
-            <button type="button " class="btn btn-primary mt-0 mb-3 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambah Data Pegawai <i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
+                <button type="button " class="btn btn-primary mt-0 mb-3 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambah Data Pegawai <i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
             </a>
         </div>
         <table id="example" class="table table-striped" style="width:100%">
