@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function Index () {
+    public function Index (Request $request) {
+
         return view ('admin.index', [
-            'title' => 'Admin'
+            'title' => 'Admin',
+            'users' => User::latest()->paginate(10)
         ]);
     }
 
