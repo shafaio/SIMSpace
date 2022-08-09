@@ -32,16 +32,9 @@
                 <div class="card-body p-0" style="border: #05323C solid">
                     <h5 class="m-0 px-3 py-3 text-center" style="background-color:#05323C; color: white;">Masuk Akun</h5>
                     <div class="input-group my-3 px-3">
-<<<<<<< HEAD:resources/views/index.blade.php
-                        <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1">
-                            <i class="fa-regular fa-user"></i>
-                        </span>
-                        <input type="text" name="id" id="id" class="logininput form-control no-focus-outline @error('id') is-invalid @enderror" placeholder="ID Anggota" aria-label="Id" aria-describedby="basic-addon1" style="border-radius: 0px !important;" autofocus value="{{ old('id') }}">                        @error('id')
-=======
                         <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1"><i class="fa-regular fa-user"></i></span>
                         <input type="text" name="id_anggota" id="id_anggota" class="form-control no-focus-outline logininput @error('id_anggota') is-invalid @enderror" placeholder="ID Anggota" style="border-radius: 0px !important;" autofocus value="{{ old('id_anggota') }}">
                         @error('id_anggota')
->>>>>>> 3363b5e99a8f39a647b9e0e99c8ccd228ade6f65:resources/views/login/index.blade.php
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -51,16 +44,12 @@
                         <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-<<<<<<< HEAD:resources/views/index.blade.php
-                        <input type="password" name="password" id="password" class="form-control logininput no-focus-outline" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-=======
                         <input type="password" name="password" id="password" class="form-control no-focus-outline logininput @error('password') is-invalid @enderror" placeholder="Password">
                         @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
->>>>>>> 3363b5e99a8f39a647b9e0e99c8ccd228ade6f65:resources/views/login/index.blade.php
                     </div>
                     <button type="submit" class="btn btn-primary d-block m-0 mx-auto mb-3 no-focus-outline" style="width: 75%; border-radius: 99px;">Masuk</button>
                 </div>
