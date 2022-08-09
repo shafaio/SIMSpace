@@ -3,7 +3,7 @@
 }
 
 .btn-primary {
-    background-color: #0F3F49 !important;
+    background-color: #05323C !important;
     border: none !important;
     height: 40px !important;
     font-size: 14px !important;
@@ -18,7 +18,7 @@
     border-bottom: #0F3F49 3px solid;
 }
 
-.form-control {
+.logininput {
     border-radius: 0px !important;
     border-top: none !important;
     border-right: none !important;
@@ -29,4 +29,80 @@
 .no-focus-outline:focus {
     outline: none !important;
     box-shadow: none !important;
+    border: 3px solid #0F3F49;
+}
+
+.page-item.active .page-link {
+    /* z-index: 3; */
+    color: #fff !important;
+    background-color: #0F3F49 !important;
+    border-color: #0F3F49 !important;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: #0F3F49 !important;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.radius-none {
+    border-radius: 0px !important;
+}
+
+.drag-area {
+    border: 2px dashed #000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid #fff;
+}
+
+.drag-area .icon {
+    font-size: 100px;
+    color: #fff;
+}
+
+.drag-area header {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.active {
+    border-bottom: 3px solid #fff !important;
 }

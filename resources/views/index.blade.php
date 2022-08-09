@@ -23,8 +23,10 @@
                 <div class="card-body p-0" style="border: #05323C solid;">
                     <h5 class="m-0 px-3 py-3 text-center" style="background-color:#05323C; color: white;">Masuk Akun</h5>
                     <div class="input-group my-3 px-3">
-                        <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1"><i class="fa-regular fa-user"></i></span>
-                        <input type="text" name="id" id="id" class="form-control @error('id') is-invalid @enderror" placeholder="ID Anggota" aria-label="Id" aria-describedby="basic-addon1" style="border-radius: 0px !important;" autofocus value="{{ old('id') }}">                        @error('id')
+                        <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1">
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+                        <input type="text" name="id" id="id" class="logininput form-control no-focus-outline @error('id') is-invalid @enderror" placeholder="ID Anggota" aria-label="Id" aria-describedby="basic-addon1" style="border-radius: 0px !important;" autofocus value="{{ old('id') }}">                        @error('id')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -34,9 +36,9 @@
                         <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                        <input type="password" name="password" id="password" class="form-control logininput no-focus-outline" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                     </div>
-                    <button type="submit" class="btn btn-primary d-block m-0 mx-auto mb-3" style="width: 75%; border-radius: 99px;">Masuk</button>
+                    <button type="submit" class="btn btn-primary d-block m-0 mx-auto mb-3 no-focus-outline" style="width: 75%; border-radius: 99px;">Masuk</button>
                 </div>
             </div>
         </div>

@@ -8,8 +8,5 @@
         </button>
         <div class="collapse navbar-collapse px-5" id="navbarNav">
         </div>
-        <div class="justify-content-end">
-            <button type="button" class="btn btn-primary px-4" style="border-radius: 99px; background-color: white !important; color: #232323;">Masuk</button>
-        </div>
     </div>
-  </nav>
+</nav>
