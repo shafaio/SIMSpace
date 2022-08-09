@@ -9,17 +9,15 @@
 
         @auth
         <div class="collapse navbar-collapse px-5 justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link " href="# " style="color: white !important; font-weight: 500;">SOP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="# " style="color: white !important; font-weight: 500;">Berkas</a>
-            </li>
-        </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="# " style="color: white !important; font-weight: 500;">SOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="# " style="color: white !important; font-weight: 500;">Berkas</a>
+                </li>
+            </ul>
         </div>
-<<<<<<< HEAD
-=======
         @endauth
 
         <div class="justify-content-end">
@@ -38,6 +36,5 @@
             </div>
             @endauth
         </div>
->>>>>>> 3363b5e99a8f39a647b9e0e99c8ccd228ade6f65
     </div>
 </nav>
