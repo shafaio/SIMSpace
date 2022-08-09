@@ -54,7 +54,11 @@
 }
 
 .drag-area {
+<<<<<<< HEAD
     border: 2px dashed #000;
+=======
+    border: 3px dashed #232323;
+>>>>>>> 3363b5e99a8f39a647b9e0e99c8ccd228ade6f65
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -67,6 +71,7 @@
 }
 
 .drag-area .icon {
+<<<<<<< HEAD
     font-size: 100px;
     color: #fff;
 }
@@ -81,6 +86,23 @@
     font-size: 25px;
     font-weight: 500;
     color: #fff;
+=======
+    font-size: 64px;
+    color: #05323C;
+    height: 100px;
+}
+
+.drag-area header {
+    font-size: 24px;
+    font-weight: 500;
+    color: #05323C;
+}
+
+.drag-area span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #05323C;
+>>>>>>> 3363b5e99a8f39a647b9e0e99c8ccd228ade6f65
     margin: 10px 0 15px 0;
 }
 
@@ -91,8 +113,13 @@
     border: none;
     outline: none;
     background: #fff;
+<<<<<<< HEAD
     color: #5256ad;
     border-radius: 5px;
+=======
+    color: #fff;
+    border-radius: 0px;
+>>>>>>> 3363b5e99a8f39a647b9e0e99c8ccd228ade6f65
     cursor: pointer;
 }
 
@@ -105,4 +132,11 @@
 
 .active {
     border-bottom: 3px solid #fff !important;
+<<<<<<< HEAD
+=======
+}
+
+#example a {
+    color: #05323C;
+>>>>>>> 3363b5e99a8f39a647b9e0e99c8ccd228ade6f65
 }

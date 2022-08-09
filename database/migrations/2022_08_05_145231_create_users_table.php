@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('id_anggota');
             $table->string('nama_anggota');
+            $table->string('jabatan');
             $table->string('password');
             $table->timestamps();
         });

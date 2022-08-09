@@ -2,35 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function register (Request $request) {
-        return $request->validate([
-            'id' => 'required|integer|unique|max:11',
-            'nama' => 'required|max:255',
+    public function Store (Request $request) {
+        $validatedData = $request->validate([
+            'id_anggota' => 'required|max:11|unique:users',
+            'nama_anggota' => 'required|max:255',
+            'jabatan' => 'required|max:255',
             'password' => 'required|min:8|max:255'
         ]);
-    }
 
-    public function Index () {
-        return view('index', [
-            'title' => 'Login',
-        ]);
-    }
-    
-    public function Login (Request $request) {
-        $credentials = $request->validate([
-            'id' => 'required|integer',
-            'password' => 'required'
-        ]);
+        $validatedData['password'] = bcrypt($validatedData['password']);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
+        User::create($validatedData);
 
-            return redirect()->intended('/SOP');
-        }
+        return redirect('/admin');
     }
 }

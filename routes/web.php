@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SOPController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +17,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', [UserController::class, 'Index']);
-Route::post('/', [UserController::class, 'Login']);
+Route::get('/admin', [AdminController::class, 'Index']);
+Route::get('/tambahData', [AdminController::class, 'TambahData']);
 
-Route::post('/register', [UserController::class, 'register']);
+Route::get('/', [LoginController::class, 'Index']);
+Route::post('/login', [LoginController::class, 'Login']);
+Route::post('/logout', [LoginController::class, 'Logout']);
+
+Route::post('/tambahData', [UserController::class, 'Store']);
+
+Route::get('/sop', [SOPController::class, 'Index']);
