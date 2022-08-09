@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SOPController;
+use Illuminate\Routing\RouteGroup;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,17 @@ use App\Http\Controllers\SOPController;
 |
 */
 
-Route::get('/admin', [AdminController::class, 'Index']);
-Route::get('/tambahData', [AdminController::class, 'TambahData']);
+Route::middleware(['auth'])->group(function() {
+    route::get('/sop', [SOPController::class, 'Index']);
+    route::post('/logout', [LoginController::class, 'Logout']);
+});
+Route::middleware([])->group(function() {
+    route::get('/admin', [AdminController::class, 'Index'])->name('admin');
+    route::post('/tambahData', [UserController::class, 'Store']);
+    route::get('/tambahData', [AdminController::class, 'TambahData']);
+});
 
-Route::get('/', [LoginController::class, 'Index']);
-Route::post('/login', [LoginController::class, 'Login']);
-Route::post('/logout', [LoginController::class, 'Logout']);
-
-Route::post('/tambahData', [UserController::class, 'Store']);
-
-Route::get('/sop', [SOPController::class, 'Index']);
+Route::middleware(['guest'])->group(function() {
+    route::get('/', [LoginController::class, 'Index'])->name('login');
+    route::post('/login', [LoginController::class, 'Login']);
+});

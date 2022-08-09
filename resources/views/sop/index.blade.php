@@ -12,36 +12,44 @@
 
 <section class="mt-4">
     <div class="container ">
-        <h6 class="px-3 py-3 " style="background-color: #05323C; color: white; ">Berkas</h6>
-        <p class="my-3" style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur facere laboriosam impedit quos nihil sequi ad non ratione eos officia error fugiat dolores deserunt beatae harum dolore voluptatibus possimus reprehenderit vitae
-            quasi, corrupti ea perferendis. Dolor nemo excepturi accusamus facere necessitatibus nam, facilis molestias voluptate cum praesentium sapiente porro quidem rerum, vitae illo quae debitis consequatur minima maiores assumenda perferendis
-            voluptatum voluptatem ea? Possimus corporis, voluptatum in blanditiis aliquid suscipit fuga, rerum velit saepe pariatur dolorem corrupti? Accusamus animi aut, totam repellendus numquam esse a inventore repellat mollitia reiciendis enim
-            dolore nisi placeat, dolorum assumenda illo. Commodi, voluptatibus ad.</p>
+        <h6 class="px-3 py-3" style="background-color: #05323C; color: white; ">Standar Operasional Prosedur</h6>
+        @if (auth()->User()->jabatan == "Chief Oprational Officer")
+        <div class="d-flex justify-content-end mb-3">
+            <button type="button " class="btn btn-primary m-0 mb-3 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambahkan SOP <i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
+        </div>
+        @endif
         <table id="example" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
                     <th>Nomor SOP</th>
                     <th>Nama SOP</th>
                     <th>Penanggung Jawab</th>
+                    @if (auth()->User()->jabatan == "Chief Oprational Officer")
+                    <th>Aksi</th>
+                    @endif
                 </tr>
             </thead>
             <tbody>
+
+            {{-- @foreach ($sops as $sop) --}}
                 <tr>
-                    <td>Tiger Nixon</td>
-                    <td>
-                        <a href="">System Architect</a>
+                    <td class="align-middle">Tiger Nixon</td>
+                    <td class="align-middle">
+                        <a href="">
+                            System Architect
+                        </a>
                     </td>
-                    <td>Edinburgh</td>
+                    <td class="align-middle">Edinburgh</td>
+                    @if (auth()->user()->jabatan == "Chief Oprational Officer")
+                    <td class="align-middle">
+                        <a href="#"><img href="/" src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
+                        <a href="#"><img href="#" src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
+                    </td>
+                    @endif
                 </tr>
+            {{-- @endforeach --}}
+
             </tbody>
-            <!-- <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                </tr>
-            </tfoot> -->
         </table>
     </div>
 </section>

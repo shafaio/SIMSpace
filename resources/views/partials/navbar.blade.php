@@ -16,15 +16,19 @@
                 <li class="nav-item">
                     <a class="nav-link " href="# " style="color: white !important; font-weight: 500;">Berkas</a>
                 </li>
+                @if (auth()->user()->jabatan == 'Admin')
+                <li class="nav-item">
+                    <a class="nav-link " href="# " style="color: white !important; font-weight: 500;">Admin</a>
+                </li>
+                @endif
             </ul>
         </div>
         @endauth
 
         <div class="justify-content-end">
             @auth
-            {{-- <h6 class="m-0">ID Space</h6> --}}
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle bg-transparent no-focus-outline" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border: none !important;">Admin</button>
+                <button class="btn btn-secondary dropdown-toggle bg-transparent no-focus-outline" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border: none !important;">{{ auth()->user()->nama_anggota }}</button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li>
                         <form action="/logout" method="post">
