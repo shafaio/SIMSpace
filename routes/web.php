@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\SOPController;
-use Illuminate\Routing\RouteGroup;
+use App\Http\Controllers\HomeSopController;
+use App\Http\Controllers\HomeDocumentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,9 @@ use Illuminate\Routing\RouteGroup;
 */
 
 Route::middleware(['auth'])->group(function() {
-    route::get('/sop', [SOPController::class, 'Index']);
+    route::resource('/home/sop', HomeSopController::class);
+    route::resource('/home/document', HomeDocumentController::class);
+    route::get('/tambah-sop', [SopController::class, 'Store']);
     route::post('/logout', [LoginController::class, 'Logout']);
 });
 Route::middleware([])->group(function() {

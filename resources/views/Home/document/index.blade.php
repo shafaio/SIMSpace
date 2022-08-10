@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-
+    
 <section class=" " style="margin-top: 115px; ">
     <div class="container ">
         <div class="row mx-auto " style="height: 143px; width: 568px; ">
@@ -10,36 +10,31 @@
     </div>
 </section>
 
-<section class="mt-4">
+<section class="mt-4 ">
     <div class="container ">
-        <h6 class="px-3 py-3" style="background-color: #05323C; color: white; ">Standar Operasional Prosedur</h6>
-        @if (auth()->User()->jabatan == "Chief Oprational Officer")
-        <div class="d-flex justify-content-end mb-3">
-            <button type="button " class="btn btn-primary m-0 mb-3 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambahkan SOP <i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
-        </div>
-        @endif
+        <h6 class="px-3 py-3 " style="background-color: #05323C; color: white; ">Berkas</h6>
+        <a href="tambah-berkas.html" class="text-decoration-none">
+            <div class="d-flex justify-content-end mb-3">
+                <button type="button " class="btn btn-primary m-0 mb-3 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambahkan Berkas <i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
+            </div>
+        </a>
         <table id="example" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Nomor SOP</th>
-                    <th>Nama SOP</th>
+                    <th>Nama Dokumen</th>
                     <th>Penanggung Jawab</th>
-                    @if (auth()->User()->jabatan == "Chief Oprational Officer")
                     <th>Aksi</th>
-                    @endif
                 </tr>
             </thead>
             <tbody>
-
-            {{-- @foreach ($sops as $sop) --}}
+                @foreach ($documents as $document)
                 <tr>
-                    <td class="align-middle">Tiger Nixon</td>
                     <td class="align-middle">
-                        <a href="">
-                            System Architect
+                        <a href="/home/sop/{{ $document->nama_berkas }}">
+                            {{ $document->nama_berkas }}
                         </a>
                     </td>
-                    <td class="align-middle">Edinburgh</td>
+                    <td class="align-middle">{{ $document->pj_berkas }}</td>
                     @if (auth()->user()->jabatan == "Chief Oprational Officer")
                     <td class="align-middle">
                         <a href="#"><img href="/" src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
@@ -47,11 +42,10 @@
                     </td>
                     @endif
                 </tr>
-            {{-- @endforeach --}}
-
+                @endforeach
             </tbody>
         </table>
     </div>
 </section>
-    
+
 @endsection

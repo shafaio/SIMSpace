@@ -5,15 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class SOPController extends Controller
+class SopController extends Controller
 {
     public function Index (Request $request) {
-        return view ('sop.index', [
-            'title' => 'Standar Operasional Prosedur',
+
+    }
+
+    public function Store (Request $request) {
+        return view ('sop.tambahData', [
+            'title' => 'Tambah Data Standar Operasional Prosedur'
         ]);
     }
 
-    public function adminSOP () {
+    public function adminSop () {
         return view ('sop.adminSOP');   
     }
 }

@@ -5,11 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SOP extends Model
+class Sop extends Model
 {
     use HasFactory;
 
-    public function users () {
-        return $this->belongsToMany(User::class)->withTimestamps();
-    }
 }
