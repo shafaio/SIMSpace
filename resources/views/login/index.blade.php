@@ -11,7 +11,7 @@
 </section>
 
 @if(session()->has('loginError'))
-<div class="alert alert-danger alert-dismissible fade show card mx-auto" role="alert" style="width: 32rem">
+<div class="alert alert-danger alert-dismissible fade show card mx-auto mt-5" role="alert" style="width: 32rem">
     {{ session('loginError') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 </div>
