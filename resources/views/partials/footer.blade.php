@@ -1,4 +1,4 @@
-<section class="py-3 fw-normal" style="background-color: #05323C; color: white; font-size: 12px; margin-top: 150px;">
+<section class="py-3 fw-normal" style="background-color: #05323C; color: white; font-size: 12px;">
     <div class="container ">
         <div class="row my-4 ">
             <div class="col-md-4 my-auto">
