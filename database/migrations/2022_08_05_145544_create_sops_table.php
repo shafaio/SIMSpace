@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('no_sop');
             $table->string('nama_sop');
             $table->string('pj_sop');
+            $table->string('dirFile');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('s_o_p_s');
+        Schema::dropIfExists('sops');
     }
 };

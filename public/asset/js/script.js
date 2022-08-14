@@ -40,7 +40,7 @@ dropArea.addEventListener("drop", (event) => {
 
 function showFile() {
     let fileType = file.type; //getting selected file type
-    let validExtensions = ["image/jpeg", "image/jpg", "image/png", ".pdf"]; //adding some valid image extensions in array
+    let validExtensions = [".pdf"]; //adding some valid image extensions in array
     if (validExtensions.includes(fileType)) { //if user selected file is an image file
         let fileReader = new FileReader(); //creating new FileReader object
         fileReader.onload = () => {
@@ -50,7 +50,7 @@ function showFile() {
         }
         fileReader.readAsDataURL(file);
     } else {
-        alert("This is not an Image File!");
+        alert("This is not an pdf File!");
         dropArea.classList.remove("active");
         dragText.textContent = "Drag & Drop to Upload File";
     }

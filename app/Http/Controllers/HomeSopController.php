@@ -40,7 +40,7 @@ class HomeSopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request->file('sop')->store('dokumen-sop');
     }
 
     /**

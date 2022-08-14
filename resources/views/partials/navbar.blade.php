@@ -28,7 +28,7 @@
         <div class="justify-content-end">
             @auth
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle bg-transparent no-focus-outline" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border: none !important;">{{ auth()->user()->nama_anggota }} ({{ auth()->user()->id_anggota }})</button>
+                <button class="btn btn-secondary dropdown-toggle bg-transparent no-focus-outline" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border: none !important;">{{ auth()->user()->nama_anggota }}</button>
                 <ul class="dropdown-menu">
                     <li>
                         <form action="/logout" method="post">

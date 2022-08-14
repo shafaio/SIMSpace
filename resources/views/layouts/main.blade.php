@@ -43,7 +43,7 @@
 
     <script>
         $(document).ready(function() {
-            $('#table_id').DataTable();
+            $('#sops').DataTable();
         });
     </script>
 </body>
