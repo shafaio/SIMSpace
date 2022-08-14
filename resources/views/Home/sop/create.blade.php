@@ -16,8 +16,8 @@
         <form action="/home/sop" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row mb-2">
-                <div class="col-md-4">
-                    <!-- drag n drop file -->
+                <!-- <div class="col-md-4">
+                    drag n drop file
                     <div class="drag-area py-2" style="height: 535px;">
                         <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
                         <header>Drag & Drop to Upload File</header>
@@ -25,23 +25,27 @@
                         {{-- <button class="btn btn-primary">Browse File</button> --}}
                         <input class="btn btn-primary" type="file" accept=".pdf">
                     </div>
-                </div>
-                <div class="col-md-8">
-                    <h6 class="p-3 d-block mb-3" style="width: 35%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nomor SOP</h6>
+                </div> -->
+                <div class="col-md">
+                    <h6 class="p-3 d-block mb-3" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nomor SOP</h6>
                     <div class="mb-3">
                         <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Nomor SOP" style="font-size: 14px; height: 48px;">
                     </div>
-                    <h6 class="p-3 d-block mb-3 mt-4" style="width: 35%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nama SOP</h6>
+                    <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nama SOP</h6>
                     <div class="mb-3">
                         <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Nama SOP" style="font-size: 14px; height: 48px;">
                     </div>
-                    {{-- <h6 class="p-3 d-block mb-3 mt-4" style="width: 35%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nama Penanggung Jawab</h6>
+                    <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nama Penanggung Jawab</h6>
                     <div class="mb-3">
                         <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Indah Fadlina" style="font-size: 14px; height: 48px;">
-                    </div> --}}
-                    <h6 class="p-3 d-block mb-3 mt-4" style="width: 35%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Penanggung Jawab</h6>
+                    </div>
+                    <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Penanggung Jawab</h6>
                     <div class="mb-3">
                         <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Chief Human Resouce Officer (CHRO)" style="font-size: 14px; height: 48px;">
+                    </div>
+                    <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Unggah File</h6>
+                    <div class="mb-3">
+                        <input type="file" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Chief Human Resouce Officer (CHRO)" style="font-size: 14px;" accept=".pdf">
                     </div>
                 </div>
             </div>
