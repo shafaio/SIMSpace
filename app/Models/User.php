@@ -9,7 +9,7 @@ use Laratrust\Traits\LaratrustUserTrait;
 
 class User extends Authenticatable
 {
-    use LaratrustUserTrait;
+    // use LaratrustUserTrait;
     use HasFactory;
 
     protected $guarded = ['id'];
