@@ -22,8 +22,8 @@
                         <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
                         <header>Drag & Drop to Upload File</header>
                         <span>OR</span>
-                        <button class="btn btn-primary">Browse File</button>
-                        <input class="btn btn-primary" hidden type="file" accept=".pdf">
+                        {{-- <button class="btn btn-primary">Browse File</button> --}}
+                        <input class="btn btn-primary" type="file" accept=".pdf">
                     </div>
                 </div>
                 <div class="col-md-8">
