@@ -51,7 +51,7 @@
                     <tr>
                         <td class="align-middle">{{ $sop->no_sop }}</td>
                         <td class="align-middle">
-                            <a href="/home/sop/{{ $sop->no_sop }}">
+                            <a href="/home/sop/{{ $sop->no_sop }}" style="color:inherit" >
                                 {{ $sop->nama_sop }}
                             </a>
                         </td>
