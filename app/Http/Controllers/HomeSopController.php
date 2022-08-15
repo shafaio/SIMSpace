@@ -40,7 +40,20 @@ class HomeSopController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->file('sop')->store('dokumen-sop');
+        $validatedData = $request->validate([
+            'no_sop' => 'required',
+            'nama_sop' => 'required',
+            'pj_sop' => 'required',
+            'file_sop' => 'required|file|max:5120|mimes:pdf'
+        ]);
+
+        if ($request->file('file_sop')) {
+            $validatedData['file_sop'] = $request->file('file_sop')->store('dokumen-sop');
+        }
+
+        Sop::create($validatedData);
+        
+        return redirect('/home/sop')->with('success', "Berhasil Menambahkan SOP!");
     }
 
     /**
@@ -51,7 +64,10 @@ class HomeSopController extends Controller
      */
     public function show(Sop $sop)
     {
-        //
+        return view ('home.sop.view', [
+            'title' => $sop->nama_sop,
+            'sop' => $sop
+        ]);
     }
 
     /**

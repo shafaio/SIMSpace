@@ -32,12 +32,15 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 </head>
 <body>
+    <div class="main">
+        @include('partials.navbar')
+    
+        @yield('content')
+    </div>
 
-    @include('partials.navbar')
-
-    @yield('content')
-
-    @include('partials.footer')
+    <footer>
+        @include('partials.footer')
+    </footer>
 
     <script src="../asset/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

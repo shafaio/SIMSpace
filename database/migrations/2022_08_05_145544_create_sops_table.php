@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('no_sop');
             $table->string('nama_sop');
             $table->string('pj_sop');
-            $table->string('dirFile');
+            $table->string('file_sop');
             $table->timestamps();
         });
     }

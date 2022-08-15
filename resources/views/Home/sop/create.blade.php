@@ -16,43 +16,49 @@
         <form action="/home/sop" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row mb-2">
-                <!-- <div class="col-md-4">
-                    drag n drop file
-                    <div class="drag-area py-2" style="height: 535px;">
-                        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                        <header>Drag & Drop to Upload File</header>
-                        <span>OR</span>
-                        {{-- <button class="btn btn-primary">Browse File</button> --}}
-                        <input class="btn btn-primary" type="file" accept=".pdf">
-                    </div>
-                </div> -->
                 <div class="col-md">
                     <h6 class="p-3 d-block mb-3" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nomor SOP</h6>
                     <div class="mb-3">
-                        <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Nomor SOP" style="font-size: 14px; height: 48px;">
+                        <input type="text" name="no_sop" class="form-control radius-none @error('no_sop')" is-invalid @enderror" id="exampleFormControlInput1" placeholder="Nomor SOP" style="font-size: 14px; height: 48px"; value="{{ old('no_sop') }}">
+                        @error('no_sop')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nama SOP</h6>
                     <div class="mb-3">
-                        <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Nama SOP" style="font-size: 14px; height: 48px;">
-                    </div>
-                    <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Nama Penanggung Jawab</h6>
-                    <div class="mb-3">
-                        <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Indah Fadlina" style="font-size: 14px; height: 48px;">
+                        <input type="text" name="nama_sop" class="form-control radius-none @error('nama_sop') is-invalid @enderror" id="exampleFormControlInput1" placeholder="Nama SOP" style="font-size: 14px; height: 48px;" value="{{ old('nama_sop') }}">
+                        @error('nama_sop')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Penanggung Jawab</h6>
                     <div class="mb-3">
-                        <input type="text" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Chief Human Resouce Officer (CHRO)" style="font-size: 14px; height: 48px;">
+                        <input type="text" name="pj_sop" class="form-control radius-none @error('pj_sop') is-invalid @enderror" id="exampleFormControlInput1" placeholder="Chief Human Resouce Officer (CHRO)" style="font-size: 14px; height: 48px;" value="{{ old('pj_sop') }}">
+                        @error('pj_sop')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <h6 class="p-3 d-block mb-3 mt-4" style="width: 100%; border-radius: 0; background-color: #05323C ; color: white !important; font-weight: 600;">Unggah File</h6>
                     <div class="mb-3">
-                        <input type="file" class="form-control radius-none" id="exampleFormControlInput1" placeholder="Chief Human Resouce Officer (CHRO)" style="font-size: 14px;" accept=".pdf">
+                        <input type="file" name="file_sop" class="form-control radius-none @error('file_sop') is-invalid @enderror" id="exampleFormControlInput1" placeholder="Chief Human Resouce Officer (CHRO)" style="font-size: 14px;" value="{{ old('file_sop') }}">
+                        @error('file_sop')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                 </div>
             </div>
+            <div class="d-flex justify-content-end mb-3">
+                <button type="submit " class="btn btn-primary m-0 mb-3 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambahkan SOP<i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
+            </div>
         </form>
-        <div class="d-flex justify-content-end mb-3">
-            <button type="button " class="btn btn-primary m-0 mb-3 fw-normal mt-3 px-4" style="border-radius: 0px; width: fit-content; ">Tambahkan Dokumen <i class="fa-solid fa-plus " style="margin-left: 8px;"></i></button>
-        </div>
     </div>
 </section>
     

@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function Login (Request $request) {
         $credentials = $request->validate([
-            'id_anggota' => 'required|max:11',
+            'id_anggota' => 'required|min:9|max:9',
             'password' => 'required|min:8|max:255'
         ]);
 

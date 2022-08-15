@@ -27,7 +27,11 @@
                 </tr>
             </thead>
             <tbody>
-
+            @if ($users->isEmpty())
+            <tr>
+                <td colspan="3" class="text-center"><i>Data pegawai kosong</i></td>
+            </tr>
+            @else
             @foreach ($users as $user)
                 <tr>
                     <td>{{ $user['nama_anggota'] }}</td>
@@ -35,16 +39,8 @@
                     <td>{{ $user['jabatan'] }}</td>
                 </tr>
             @endforeach
-
+            @endif
             </tbody>
-            <!-- <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                </tr>
-            </tfoot> -->
         </table>
 
         {{ $users->links() }}

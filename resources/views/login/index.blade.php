@@ -32,7 +32,7 @@
                 <div class="card-body p-0" style="border: #05323C solid">
                     <h5 class="m-0 px-3 py-3 text-center" style="background-color:#05323C; color: white;">Masuk Akun</h5>
                     <div class="input-group my-3 px-3">
-                        <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1"><i class="fa-regular fa-user"></i></span>
+                        <span class="input-group-text bg-transparent bottom p-3" id="basic-addon1""><i class="fa-regular fa-user"></i></span>
                         <input type="text" name="id_anggota" id="id_anggota" class="form-control no-focus-outline logininput @error('id_anggota') is-invalid @enderror" placeholder="ID Anggota" style="border-radius: 0px !important;" autofocus value="{{ old('id_anggota') }}">
                         @error('id_anggota')
                         <div class="invalid-feedback">
