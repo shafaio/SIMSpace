@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_anggota');
             $table->string('nama_berkas');
             $table->string('pj_berkas');
+            $table->string('file_berkas');
             $table->timestamps();
         });
     }

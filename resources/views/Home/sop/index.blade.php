@@ -13,7 +13,7 @@
 <section class="mt-4">
     <div class="container ">
         <h6 class="px-3 py-3" style="background-color: #05323C; color: white; ">Standar Operasional Prosedur</h6>
-        <p align="justify">Standar Operasional Prosedur adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p align="justify">Standar Operasional Prosedur adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
 
         @if(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show card mx-auto" role="alert" style="width: 32rem">
@@ -44,7 +44,7 @@
             <tbody>
                 @if ($sops->isEmpty())
                 <tr>
-                    <td colspan="3" class="text-center"><i>Data SOP kosong</i></td>
+                    <td colspan="{{ auth()->user()->jabatan == "Chief Oprational Officer" ? '4' : '3' }}" class="text-center"><i>Data SOP Kosong</i></td>
                 </tr>
                 @else
                 @foreach ($sops as $sop)

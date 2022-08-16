@@ -27,7 +27,9 @@ class HomeDocumentController extends Controller
      */
     public function create()
     {
-        //
+        return view ('home.document.create', [
+            'title' => 'Tambah Berkas'
+        ]); 
     }
 
     /**
@@ -38,7 +40,19 @@ class HomeDocumentController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'nama_berkas' => 'required',
+            'pj_berkas' => 'required',
+            'file_berkas' => 'required|file|max:5120|mimes:pdf'
+        ]);
+
+        if ($request->file('file_berkas')) {
+            $validatedData['file_berkas'] = $request->file('file_berkas')->store('dokumen-berkas');
+        }
+
+        Document::create($validatedData);
         
+        return redirect('/home/document')->with('success', "Berhasil Menambahkan Berkas!");
     }
 
     /**
