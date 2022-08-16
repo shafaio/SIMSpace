@@ -34,9 +34,7 @@
                 <tr>
                     <th>Nama Berkas</th>
                     <th>Penanggung Jawab</th>
-                    @if (auth()->User()->jabatan == "Chief Human Resource Officer")
                     <th>Aksi</th>
-                    @endif
                 </tr>
             </thead>
             <tbody>
@@ -49,13 +47,13 @@
                     <tr>
                         <td class="align-middle">{{ $document->nama_berkas }}</td>
                         <td class="align-middle">{{ $document->pj_berkas }}</td>
-                        @if (auth()->user()->jabatan == "Chief Human Resource Officer")
                         <td class="align-middle">
+                            @if (auth()->user()->jabatan == "Chief Human Resource Officer")
                             <a href="#" style="margin-right: 15px"><img src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
                             <a href="#" style="margin-right: 15px"><img src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
+                            @endif
                             <a href="#"><img src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
                         </td>
-                        @endif
                     </tr>
                 @endforeach
                 @endif
