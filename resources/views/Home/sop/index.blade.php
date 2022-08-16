@@ -58,8 +58,9 @@
                         <td class="align-middle">{{ $sop->pj_sop }}</td>
                         @if (auth()->user()->jabatan == "Chief Oprational Officer")
                         <td class="align-middle">
-                            <a href="#" style="margin-right: 15px"><img src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
-                            <a href="#"><img src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
+                            <a href="#"><img src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
+                            <a href="#" class="mx-3"><img src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
+                            <a href="#"><img src="../asset/img/Iconly/Light-Outline/undur.svg" alt=""></a>
                         </td>
                         @endif
                     </tr>
