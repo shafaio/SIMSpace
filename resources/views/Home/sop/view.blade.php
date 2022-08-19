@@ -17,7 +17,7 @@
         </h6>
         <div class="row mb-2">
             <div class="col-md-7">
-                <embed src="{{ asset('storage/' . $sop->file_sop) }}" type="application/pdf" width="100%" height="700px">
+                <embed src="{{ asset('storage/' . $sop->file_sop) }}" type="application/pdf" width="100%" height="1000px">
             </div>
             <div class="col-md-5">
                 <div>

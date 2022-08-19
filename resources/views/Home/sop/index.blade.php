@@ -16,7 +16,7 @@
         <p align="justify">Standar Operasional Prosedur adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
 
         @if(session()->has('success'))
-        <div class="alert alert-success alert-dismissible fade show card mx-auto" role="alert" style="width: 32rem">
+        <div class="alert alert-success alert-dismissible fade show card mx-auto" role="alert" style="width: fit-content">
             {{ session('success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
@@ -58,9 +58,8 @@
                         <td class="align-middle">{{ $sop->pj_sop }}</td>
                         @if (auth()->user()->jabatan == "Chief Oprational Officer")
                         <td class="align-middle">
-                            <a href="#"><img src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
+                            <a href="/home/sop/{{ $sop->no_sop }}/edit"><img src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
                             <a href="#" class="mx-3"><img src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
-                            <a href="#"><img src="../asset/img/Iconly/Light-Outline/undur.svg" alt=""></a>
                         </td>
                         @endif
                     </tr>

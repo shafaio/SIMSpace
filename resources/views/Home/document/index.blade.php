@@ -12,7 +12,7 @@
 
 <section class="mt-4">
     <div class="container ">
-        <h6 class="px-3 py-3" style="background-color: #05323C; color: white; ">Berkas </h6>
+        <h6 class="px-3 py-3" style="background-color: #05323C; color: white; ">Berkas</h6>
 
         @if(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show card mx-auto" role="alert" style="width: 32rem">
@@ -52,7 +52,7 @@
                             <a href="#" style="margin-right: 15px"><img src="../asset/img/Iconly/Light-Outline/Tick-Circle.svg" alt=""></a>
                             <a href="#" style="margin-right: 15px"><img src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
                             @endif
-                            <a href="#"><img src="../asset/img/Iconly/Light-Outline/Close-Circle.svg" alt=""></a>
+                            <a href="#"><img src="../asset/img/Iconly/Light-Outline/Download-Circle.svg" alt=""></a>
                         </td>
                     </tr>
                 @endforeach

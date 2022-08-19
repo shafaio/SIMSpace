@@ -41,14 +41,15 @@ class HomeSopController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'no_sop' => 'required',
-            'nama_sop' => 'required',
+            'no_sop' => 'required|unique:sops|min:7|max:7',
+            'nama_sop' => 'required|unique:sops',
             'pj_sop' => 'required',
             'file_sop' => 'required|file|max:5120|mimes:pdf'
         ]);
 
         if ($request->file('file_sop')) {
-            $validatedData['file_sop'] = $request->file('file_sop')->store('dokumen-sop');
+            $file_name = $request->nama_sop;
+            $validatedData['file_sop'] = $request->file('file_sop')->storeAs('dokumen-sop', $file_name);
         }
 
         Sop::create($validatedData);
@@ -78,7 +79,10 @@ class HomeSopController extends Controller
      */
     public function edit(Sop $sop)
     {
-        //
+        return view ('home.sop.edit', [
+            'title' => 'Ubah SOP',
+            'sop' => $sop
+        ]);
     }
 
     /**
@@ -90,7 +94,25 @@ class HomeSopController extends Controller
      */
     public function update(Request $request, Sop $sop)
     {
-        //
+        $tmpValidated = [
+            'pj_sop' => 'required',
+            'file_sop' => 'file|max:5120|mimes:pdf'
+        ];
+
+        if ($request->no_sop != $sop->no_sop) {
+            $tmpValidated['no_sop'] = 'required|unique:sops|min:7|max:7';
+        }
+
+        if ($request->nama_sop != $sop->nama_sop) {
+            $tmpValidated['nama_sop'] = 'required|unique:sops';
+        }
+
+        $validatedData = $request->validate($tmpValidated);
+
+        Sop::where('id', $sop->id)
+            ->update($validatedData);
+
+        return redirect('/home/sop')->with('success', "Berhasil Merubah SOP!");
     }
 
     /**
